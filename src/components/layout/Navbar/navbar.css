@@ -5,6 +5,34 @@
     justify-content: center;
 }
 
+.menu {
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.menuline {
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    transition: all .2s ease-in;
+}
+
+.menuline2 {
+    width: 20px;
+    height: 1px;
+    background-color: #fff;
+    transition: all .3s ease-in;
+}
+
+.menu.active>.menuline {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.menu.active>.menuline2 {
+    transform: rotate(-45deg) translateY(-7px);
+}
+
+
 @media screen and (max-width: 824px) {
     .nav-link {
         justify-content: flex-start;

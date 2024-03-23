@@ -1,11 +1,12 @@
-import { Box, Icon, Link, List, ListItem, useBreakpointValue } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Icon, Link, List, ListItem, Stack, useBreakpointValue } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import { IoBagOutline, IoLogoApple, IoSearch } from 'react-icons/io5'
 import './navbar.css'
+import { MobileMenu } from './MobileMenu'
 
 export const Navbar = () => {
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false })
-    console.log(isMobile)
+    const [active, setActive] = useState(false)
     return (
         <Box as='header' background={'black'}>
             <Box maxW="6xl" mx="auto" px={{ base: '6', lg: '12' }}>
@@ -54,12 +55,15 @@ export const Navbar = () => {
                         <Icon as={IoBagOutline} fontSize={{ base: 20, md: 16 }} color='#f5f5f7' />
                     </ListItem>
                     {
-                        isMobile && <ListItem className='nav-link' px={{ base: 3, md: 1 }} >
-                            <Icon as={IoBagOutline} fontSize={{ base: 20, md: 16 }} color='#f5f5f7' />
-                        </ListItem>
+                        isMobile &&
+                        <Stack spacing={2} pos={'relative'} ml={{ base: 3, md: 1 }} onClick={() => setActive(!active)} className={`menu ${active ? 'active' : ""}`} zIndex={9}>
+                            <Box className="menuline"></Box>
+                            <Box className="menuline2"></Box>
+                        </Stack>
                     }
                 </List>
-            </Box>
-        </Box>
+                <MobileMenu active={active} />
+            </Box >
+        </Box >
     )
 }
