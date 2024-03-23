@@ -27,7 +27,7 @@ export const MobileMenu = ({ active }: { active: boolean }) => {
                                     <Link _hover={{ textDecoration: 'none', color: 'gray.100' }} href="/">Watch</Link>
                                 </ListItem>
                                 <ListItem className='nav-link' px={1}>
-                                    <Link _hover={{ textDecoration: 'none', color: 'gray.100' }} href="/">Airpods</Link>
+                                    <Link _hover={{ textDecoration: 'none', color: 'gray.100' }} href="/">AirPods</Link>
                                 </ListItem>
                                 <ListItem className='nav-link' px={1}>
                                     <Link _hover={{ textDecoration: 'none', color: 'gray.100' }} href="/">TV & Home</Link>
