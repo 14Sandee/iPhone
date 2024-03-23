@@ -1,12 +1,13 @@
 import { Box, Button, Heading, Stack, Text, calc, useBreakpointValue } from '@chakra-ui/react'
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 
 export const WelcomeSection = () => {
     const [isPlaying, setIsPlaying] = useState(true)
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     console.log(isMobile)
     return (
-        <Stack w='full' bg={'black'} h='calc(100vh - 48px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
+        <Stack as={'section'} w='full' bg={'black'} h='calc(100vh - 48px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
             {/* {isPlaying ? <video autoPlay muted id="myVideo" onPause={() => setIsPlaying(false)}>
                 <source src="./src/assets/videos/landingVideo.mp4" type="video/mp4" />
             </video> : <img src="./src/assets/images/landingImage.jpeg" alt="landingImage" />} */}
@@ -19,12 +20,17 @@ export const WelcomeSection = () => {
                         {isMobile ? <MobileVideo /> : <DesktopVideo />}
                     </Stack>
                 </Stack>
+
                 <Stack spacing={8} w='full' alignItems={'center'}>
-                    <Button rounded={'full'} size={'lg'} fontWeight={400} colorScheme='primary'>Buy</Button>
-                    <Text color='gray.100' fontSize='xl' fontWeight={600}>From ₹21483.00/mo.‡ or ₹134900.00*</Text>
+                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}>
+                        <Button rounded={'full'} size={'lg'} fontWeight={400} colorScheme='primary'>Buy</Button>
+                    </motion.div>
+                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                        <Text color='gray.100' fontSize='xl' fontWeight={600}>From ₹21483.00/mo.‡ or ₹134900.00*</Text>
+                    </motion.div>
                 </Stack>
             </Stack>
-        </Stack>
+        </Stack >
     )
 }
 
