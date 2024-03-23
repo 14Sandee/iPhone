@@ -1,1 +1,1 @@
-export { MainComponent } from './MainComponent'
+export { WelcomeSection } from './WelcomeSection'
