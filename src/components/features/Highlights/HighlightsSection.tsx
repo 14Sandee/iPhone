@@ -42,9 +42,9 @@ export const HighlightsSection = () => {
     };
 
     return (
-        <Box ref={higlightsRef} h={'100vh'} as='section' pos={'relative'} bg="#101010">
+        <Box ref={higlightsRef} h={'130vh'} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
-                <Box maxW={'7xl'} pt={{ base: 10, md: 32 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
+                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
                             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
@@ -67,9 +67,9 @@ export const HighlightsSection = () => {
                         </>
                     }
                 </Box>
-                <Box ref={ref} bg="#101010" pos={'relative'} w='full' h='full' backdropBlur='7px'>
+                <Box bg="#101010" pos={'relative'} w='full' h='70%' backdropBlur='7px'>
                     <Box w={'full'} position={'absolute'} top={0}>
-                        <Box maxW={'7xl'} height={'2xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
+                        <Box ref={ref} maxW={'7xl'} height={'2xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
                             {
                                 isInView && data && <Swiper
                                     cssMode={true}
@@ -147,8 +147,9 @@ export const SectionButton = ({ isInView, children }: { isInView: boolean, child
     return (
         <HStack spacing={8} w='full' h='full' justifyContent={'center'} alignItems={'flex-end'}>
             {
-                isInView && <>
+                isInView && <AnimatePresence>
                     <motion.div
+                        key={'section-button'}
                         style={{ position: 'sticky' }}
                         className="box"
                         animate={{
@@ -156,12 +157,11 @@ export const SectionButton = ({ isInView, children }: { isInView: boolean, child
                             borderRadius: ["50%", "50%", "999px", "999px"],
                             outlineWidth: ["10px", "10px", "0px", "0px"],
                             width: ["56px", "56px", "56px", "168px"],
-                            // backgroundColor: ['#424245b3', '#424245b3', '#424245b3', '#424245b3']
                         }}
                         exit={{
-                            scale: [1, 1, 0],
-                            borderRadius: ["999px", "50%", "50%"],
-                            width: ["56px", "56px", "56px"],
+                            scale: [1, 1, 1, 0],
+                            borderRadius: ["999px", "999px", "50%", "50%",],
+                            width: ["168px", "56px", "56px", "56px"],
                         }}
                         transition={{
                             duration: 1.2,
@@ -178,7 +178,7 @@ export const SectionButton = ({ isInView, children }: { isInView: boolean, child
                         transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.2 }}
                     >
                     </motion.div> */}
-                </>
+                </AnimatePresence>
             }
         </HStack >
     )
