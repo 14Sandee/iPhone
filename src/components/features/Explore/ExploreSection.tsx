@@ -1,15 +1,21 @@
-import { Box, Button, Grid, GridItem, HStack, Heading, IconButton, Image, Stack, Text, } from '@chakra-ui/react'
-import React, { useRef, useState } from 'react'
-import { AnimatePresence, motion, useInView } from 'framer-motion'
+import { Box, Grid, GridItem, HStack, Heading, IconButton, Image, Stack, Text, } from '@chakra-ui/react'
+import React, { useRef } from 'react'
+import { AnimatePresence, motion, useInView, useScroll } from 'framer-motion'
 import { SectionButton } from '../Highlights/HighlightsSection'
 import './styles.css'
-import { IoAdd, IoAddCircleOutline } from 'react-icons/io5'
+import { IoAdd } from 'react-icons/io5'
 
 export const ExploreSection = () => {
     const exploreRef = useRef(null)
     const ref = useRef(null)
+    const scrollRef = useRef(null);
     const isInView = useInView(exploreRef, { once: true })
     const isInView2 = useInView(ref, { once: false })
+
+    const { scrollYProgress } = useScroll({
+        offset: ["start center", "end end"],
+        target: scrollRef
+    });
     return (
         <Box ref={exploreRef} h={'240vh'} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
@@ -35,12 +41,18 @@ export const ExploreSection = () => {
                             </Heading>
                         </Stack>
                         <Stack spacing={12} ref={ref} className='grid-container' maxW={'5xl'} mx={'auto'} pos={'absolute'} left={'50%'} w='full' overflow={'hidden'}>
-                            <Grid w={'full'} templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6} mt={10}>
+                            <Grid ref={scrollRef} w={'full'} templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6} mt={10}>
                                 <GridItem colSpan={2} bg={'#000'} backgroundImage='./src/assets/images/explore_1.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
                                 </GridItem>
-                                <GridItem bg={'#000'} backgroundImage='./src/assets/images/explore_2.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
+                                <GridItem bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
+                                    <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
+                                        <Image src='./src/assets/images/explore_2.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
+                                    </motion.div>
                                 </GridItem>
-                                <GridItem bg={'#000'} backgroundImage='./src/assets/images/explore_3.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
+                                <GridItem bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
+                                    <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
+                                        <Image src='./src/assets/images/explore_3.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
+                                    </motion.div>
                                 </GridItem>
                             </Grid>
                             <HStack spacing={{ base: 10, md: 20 }} alignItems={'start'} justifyContent={'space-around'}>
@@ -52,13 +64,6 @@ export const ExploreSection = () => {
                                 </Text>
                             </HStack>
                         </Stack>
-
-                    </Box>
-
-                    <Box w={'full'} position={'absolute'} top={0}>
-                        <Box maxW={'7xl'} mx={'auto'} overflow={'hidden'}>
-
-                        </Box>
                     </Box>
                     <SectionButton isInView={isInView2} width='290px'>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
