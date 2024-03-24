@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 export const WelcomeSection = () => {
     const [isPlaying, setIsPlaying] = useState(true)
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
-    console.log(isMobile)
+
     return (
-        <Stack as={'section'} w='full' bg={'black'} h='calc(100vh - 48px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
+        <Stack as={'section'} w='full' bg={'black'} h='calc(100vh - 40px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
             {/* {isPlaying ? <video autoPlay muted id="myVideo" onPause={() => setIsPlaying(false)}>
                 <source src="./src/assets/videos/landingVideo.mp4" type="video/mp4" />
             </video> : <img src="./src/assets/images/landingImage.jpeg" alt="landingImage" />} */}
