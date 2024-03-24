@@ -143,41 +143,54 @@ export const HighlightsSection = () => {
     )
 }
 
-export const SectionButton = ({ isInView, children }: { isInView: boolean, children?: ReactNode }) => {
+export const SectionButton = ({ isInView, children, text, width = "168px" }: { isInView: boolean, children?: ReactNode, text?: string, width?: string }) => {
     return (
         <HStack spacing={8} w='full' h='full' justifyContent={'center'} alignItems={'flex-end'}>
             {
                 isInView && <AnimatePresence>
-                    <motion.div
-                        key={'section-button'}
-                        style={{ position: 'sticky' }}
-                        className="box"
-                        animate={{
-                            scale: [0, 1, 1, 1],
-                            borderRadius: ["50%", "50%", "999px", "999px"],
-                            outlineWidth: ["10px", "10px", "0px", "0px"],
-                            width: ["56px", "56px", "56px", "168px"],
-                        }}
-                        exit={{
-                            scale: [1, 1, 1, 0],
-                            borderRadius: ["999px", "999px", "50%", "50%",],
-                            width: ["168px", "56px", "56px", "56px"],
-                        }}
-                        transition={{
-                            duration: 1.2,
-                            ease: "easeInOut",
-                            times: [0, 0.5, 0.7, 1],
-                            delay: 0.2
-                        }}
-                    >
-                        {children}
-                    </motion.div>
-                    {/* <motion.div className='sticky-button'
-                        initial={{ width: 0, y: 0 }}
-                        animate={{ width: '168px', y: 0 }}
-                        transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.2 }}
-                    >
-                    </motion.div> */}
+                    <Stack position={'sticky'} bottom={10} alignItems={'center'} zIndex={9999}>
+                        {text && <motion.div key='text'
+                            style={{ backgroundColor: 'rgba(0,0,0,0.5)', padding: '2px' }}
+                            initial={{ opacity: 0, y: 0 }}
+                            animate={{
+                                opacity: 1,
+                            }}
+                            exit={{
+                                opacity: 0
+                            }}
+                            transition={{
+                                duration: 0.5,
+                                ease: "easeInOut",
+                                delay: 1
+                            }}
+                        >
+                            <Text color='white' fontSize='sm' lineHeight='125%'>{text}</Text>
+                        </motion.div>}
+                        <motion.div
+                            key={'section-button'}
+                            className="box"
+                            animate={{
+                                scale: [0, 1, 1, 1],
+                                borderRadius: ["50%", "50%", "999px", "999px"],
+                                outlineWidth: ["10px", "10px", "0px", "0px"],
+                                width: ["56px", "56px", "56px", width],
+                            }}
+                            exit={{
+                                scale: [1, 1, 1, 0],
+                                borderRadius: ["999px", "999px", "50%", "50%",],
+                                width: [width, "56px", "56px", "56px"],
+                            }}
+                            transition={{
+                                duration: 1.2,
+                                ease: "easeInOut",
+                                times: [0, 0.5, 0.7, 1],
+                                delay: 0.2
+                            }}
+                        >
+                            {children}
+                        </motion.div>
+                    </Stack>
+
                 </AnimatePresence>
             }
         </HStack >
