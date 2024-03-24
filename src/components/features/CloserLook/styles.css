@@ -1,0 +1,14 @@
+.radio {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.radio.active {
+    outline: 4px solid #0071E3;
+}
+
+.outline-blue {
+    outline: 2px solid #fff;
+
+}
