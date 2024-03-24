@@ -16,7 +16,7 @@
     min-height: 56px;
     height: auto;
     border-radius: '50%';
-    bottom: 2rem;
+    bottom: 5rem;
     z-index: 9999;
     background: #424245b3;
     backdrop-filter: blur(7px);
@@ -24,4 +24,18 @@
     outline-width: 0px;
     outline-style: solid;
     outline-color: #0071E3;
+}
+
+.pagination {
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s ease;
+}
+
+.pagination.active {
+    width: 40px;
+}
+
+.slide-text {
+    color: #fff;
 }
