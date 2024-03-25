@@ -137,7 +137,7 @@ export const CameraSection = () => {
 export const CameraScreen = () => {
     const ref = useRef(null)
     const textRef = useRef(null)
-    const isInView = useInView(ref, { once: false })
+    const isInView = useInView(ref, { once: true })
     const isInView2 = useInView(textRef, { once: false })
     return (
         <Stack maxW={'5xl'} minH={{ md: '4xl' }} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
@@ -145,8 +145,8 @@ export const CameraScreen = () => {
                 <HStack left={0} spacing={{ base: 10, md: 20 }} justifyContent={'center'}>
                     <Box ref={ref} maxW={'30%'}>
                         {isInView && <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
                             <Image src='./src/assets/images/cameraApp.jpeg' alt='camera' w={'100%'} h={'100%'} />
