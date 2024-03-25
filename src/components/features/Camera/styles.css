@@ -1,0 +1,8 @@
+.slide-container {
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.slide-container.active {
+    opacity: 1;
+}
