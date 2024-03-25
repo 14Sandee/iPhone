@@ -140,7 +140,7 @@ export const CameraScreen = () => {
     const isInView = useInView(ref, { once: false })
     const isInView2 = useInView(textRef, { once: false })
     return (
-        <Stack maxW={'5xl'} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
+        <Stack maxW={'5xl'} minH={{ md: '4xl' }} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
             <AnimatePresence>
                 <HStack left={0} spacing={{ base: 10, md: 20 }} justifyContent={'center'}>
                     <Box ref={ref} maxW={'30%'}>
