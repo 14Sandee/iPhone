@@ -8,12 +8,12 @@ export const DesignedSection = () => {
     const ref = useRef(null)
     const isInView2 = useInView(ref, { once: true })
     return (
-        <Box ref={ref} h={'100vh'} as='section' pos={'relative'} bg="#000">
+        <Box ref={ref} h={'100vh'} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
             <AnimatePresence>
-                <Box maxW={'5xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
+                <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Box overflow={'hidden'} >
-                            <Box maxW={'4xl'} mx={'auto'} px={{ base: 4, md: 20 }}>
+                            <Box maxW={'5xl'} mx={'auto'} px={{ base: 4, md: 20 }}>
                                 <Stack spacing={4} py={{ base: 10, md: 20 }} alignItems={'start'}>
                                     <Image src='./src/assets/images/designed.jpeg' alt='designed' h={16} objectFit='contain' />
                                     <Heading as='h2' color='#fff' fontSize={{ base: '3xl', md: '6xl' }} fontWeight={600}>
