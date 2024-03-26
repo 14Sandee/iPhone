@@ -19,7 +19,7 @@ export const ChipSection = () => {
                         isInView && <>
                             <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <HStack w={'full'} justifyContent={'center'} spacing={0}>
-                                    <Image src='./src/assets/images/a17chip.jpeg' alt='chip' boxSize={{ base: 32, md: 44 }} />
+                                    <Image src='./images/a17chip.jpeg' alt='chip' boxSize={{ base: 32, md: 44 }} />
                                 </HStack>
                             </motion.div>
                         </>
@@ -40,10 +40,10 @@ export const ChipSection = () => {
                         </Stack>
                         <Stack ref={ref} mt={20} spacing={12} className='grid-container' maxW={'5xl'} mx={'auto'} pos={'absolute'} left={'50%'} w='full' overflow={'hidden'}>
                             <Box w={'full'}>
-                                <Image pos={'sticky'} zIndex={9} src='./src/assets/images/iphoneframe.png' alt='iphoneframe' w={{ base: '90%', md: 'full' }} mx={{ base: 'auto' }} h={{ base: '3xs', md: 'lg' }} objectFit='contain' />
+                                <Image pos={'sticky'} zIndex={9} src='./images/iphoneframe.png' alt='iphoneframe' w={{ base: '90%', md: 'full' }} mx={{ base: 'auto' }} h={{ base: '3xs', md: 'lg' }} objectFit='contain' />
                                 <Box pos={'absolute'} zIndex={8} top={{ base: 6, md: 6 }} rounded={40} left={{ base: 6, md: 4 }} w={{ base: '88%', md: '97%' }} h={'auto'} overflow={'hidden'}>
                                     <video autoPlay muted playsInline>
-                                        <source src='./src/assets/videos/game.mp4' type="video/mp4" style={{ objectFit: 'cover', }} />
+                                        <source src='./videos/game.mp4' type="video/mp4" style={{ objectFit: 'cover', }} />
                                     </video>
                                 </Box>
                                 <Text color={'#86868b'} textAlign={'center'} fontSize={'xl'} fontWeight={600} mt={4}>

@@ -24,7 +24,7 @@ export const ZoomSection = () => {
                         <Stack mt={20} spacing={16} className='grid-container' maxW={'5xl'} mx={'auto'} pos={'absolute'} left={'50%'} w='full' overflow={'hidden'}>
                             <Box h={{ base: 'lg', md: 'auto' }} overflow={'hidden'}>
                                 <video ref={videoRef} autoPlay muted playsInline style={{ height: '100%', objectFit: 'cover' }}>
-                                    <source src='./src/assets/videos/zoom.mp4' type="video/mp4" />
+                                    <source src='./videos/zoom.mp4' type="video/mp4" />
                                 </video>
                                 <Text cursor={'pointer'} onClick={() => videoRef.current?.play()} color={'#86868b'} textAlign={'center'} fontSize={'xl'} fontWeight={600} mt={4}>
                                     Replay

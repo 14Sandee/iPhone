@@ -43,16 +43,16 @@ export const ExploreSection = () => {
                         </Stack>
                         <Stack spacing={12} ref={ref} className='grid-container' maxW={'5xl'} mx={'auto'} pos={'absolute'} left={'50%'} w='full' overflow={'hidden'}>
                             <Grid ref={scrollRef} w={'full'} templateColumns={{ base: '1fr', md: 'repeat(2, 1fr)' }} gap={6} mt={10}>
-                                <GridItem colSpan={2} bg={'#000'} backgroundImage='./src/assets/images/explore_1.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
+                                <GridItem colSpan={2} bg={'#000'} backgroundImage='./images/explore_1.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
                                 </GridItem>
                                 <GridItem colSpan={{ base: 2, md: 1 }} bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
                                     <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
-                                        <Image src='./src/assets/images/explore_2.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
+                                        <Image src='./images/explore_2.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
                                     </motion.div>
                                 </GridItem>
                                 <GridItem colSpan={{ base: 2, md: 1 }} bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
                                     <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
-                                        <Image src='./src/assets/images/explore_3.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
+                                        <Image src='./images/explore_3.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
                                     </motion.div>
                                 </GridItem>
                             </Grid>

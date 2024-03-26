@@ -48,7 +48,7 @@ export const ActionSection = () => {
                             </Stack>
                             <Stack rounded={40} w={{ base: '90%', md: '45%' }} minH={{ base: 'xl', md: '3xl' }} pos={'relative'} overflow={'hidden'}>
                                 <Box pos={'absolute'} bottom={0} zIndex={10} w={'xl'} h={'xl'} bgGradient={'linear(to top, black, transparent)'} />
-                                <Image pos={'absolute'} zIndex={9} src='./src/assets/images/iphoneframe2.png' alt='action' w={'full'} h={'full'} objectFit='contain' />
+                                <Image pos={'absolute'} zIndex={9} src='./images/iphoneframe2.png' alt='action' w={'full'} h={'full'} objectFit='contain' />
                                 <Image pos={'absolute'} zIndex={8} top={2} left={4} src={data[active].url} alt='action' w={'full'} h={'full'} objectFit='contain' />
                             </Stack>
                         </HStack>

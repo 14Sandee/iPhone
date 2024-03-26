@@ -42,7 +42,7 @@ export const VideoSlide = ({ dataArray, data, activeIndex, index }: VideoProps) 
 export const VideoSlide1 = ({ active }: { active: number }) => {
     return (
         <video autoPlay={active === 1} muted playsInline>
-            <source src="./src/assets/videos/slide2.mp4" type="video/mp4" />
+            <source src="./videos/slide2.mp4" type="video/mp4" />
         </video>
     )
 }
@@ -50,7 +50,7 @@ export const VideoSlide1 = ({ active }: { active: number }) => {
 export const VideoSlide2 = ({ active }: { active: number }) => {
     return (
         <video autoPlay={active === 1} muted playsInline>
-            <source src="./src/assets/videos/slide2.mp4" type="video/mp4" />
+            <source src="./videos/slide2.mp4" type="video/mp4" />
         </video>
     )
 }
@@ -58,7 +58,7 @@ export const VideoSlide2 = ({ active }: { active: number }) => {
 export const VideoSlide3 = ({ active }: { active: number }) => {
     return (
         <video autoPlay={active === 2} muted playsInline>
-            <source src="./src/assets/videos/slide3.mp4" type="video/mp4" />
+            <source src="./videos/slide3.mp4" type="video/mp4" />
         </video>
     )
 }
@@ -66,7 +66,7 @@ export const VideoSlide3 = ({ active }: { active: number }) => {
 export const VideoSlide4 = ({ active }: { active: number }) => {
     return (
         <video autoPlay={active === 3} muted playsInline>
-            <source src="./src/assets/videos/slide4.mp4" type="video/mp4" />
+            <source src="./videos/slide4.mp4" type="video/mp4" />
         </video>
     )
 }

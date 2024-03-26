@@ -13,7 +13,7 @@ export const CrashDetection = () => {
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Box overflow={'hidden'} >
-                            <Box overflow={'hidden'} minH={{ base: 'xl', md: '2xl' }} bgImage={'./src/assets/images/crashdetection.jpeg'} bgPosition={'center'} bgSize={'cover'}>
+                            <Box overflow={'hidden'} minH={{ base: 'xl', md: '2xl' }} bgImage={'./images/crashdetection.jpeg'} bgPosition={'center'} bgSize={'cover'}>
                                 <Stack py={{ base: 10, md: 20 }} px={{ base: 16, md: 20 }} maxW={'5xl'} mx={'auto'}>
                                     <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '6xl' }} fontWeight={600}>
                                         In an emergency,<br /> iPhone has your back.

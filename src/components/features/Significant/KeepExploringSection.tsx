@@ -45,7 +45,7 @@ export const KeepExploringSection = () => {
                         <HStack maxW={{ base: 'full', md: '70%' }} mx={{ base: 0, md: 'auto' }} px={{ base: 4, md: 20 }} spacing={{ base: 10, md: 24 }} alignItems={'start'} justifyContent={'center'}>
                             <Stack spacing={8} alignItems={'center'}>
                                 <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
-                                    <Image cursor={'pointer'} src={'./src/assets/images/iphone15pro.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
+                                    <Image cursor={'pointer'} src={'./images/iphone15pro.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
                                 </motion.div>
                                 <Stack alignItems={{ base: 'start', md: 'center' }}>
                                     <Text as='span' color={'orange'} fontSize={{ base: 'md', md: 'sm' }} fontWeight={600}>
@@ -67,7 +67,7 @@ export const KeepExploringSection = () => {
                             </Stack>
                             <Stack spacing={8} alignItems={'center'}>
                                 <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
-                                    <Image cursor={'pointer'} src={'./src/assets/images/iphone15.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
+                                    <Image cursor={'pointer'} src={'./images/iphone15.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
                                 </motion.div>
                                 <Stack alignItems={{ base: 'start', md: 'center' }}>
                                     <Text as='span' color={'orange'} fontSize={{ base: 'md', md: 'sm' }} fontWeight={600}>
@@ -93,13 +93,13 @@ export const KeepExploringSection = () => {
                         <HStack maxW={{ base: ' 100%', md: '70%' }} mx={{ base: 0, md: 'auto' }} px={{ base: 4, md: 20 }} spacing={{ base: 10, md: 24 }} alignItems={'start'} justifyContent={'center'}>
                             <Stack spacing={12} alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/a17icon.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/a17icon.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         A17 Pro chip<br /> with 6-core GPU
                                     </Text>
                                 </Stack>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/triplecamera.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/triplecamera.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         Pro camera<br /> system
                                     </Text>
@@ -116,7 +116,7 @@ export const KeepExploringSection = () => {
                                     </Stack>
                                 </Stack>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/batteryicon.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/batteryicon.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         Up to 29 hours video<br /> playback
                                     </Text>
@@ -124,13 +124,13 @@ export const KeepExploringSection = () => {
                             </Stack>
                             <Stack spacing={12} alignItems={'center'} justifyContent={'start'}>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/a16icon.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/a16icon.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         A16 Bionic chip<br /> with 5-core GPU
                                     </Text>
                                 </Stack>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/dualcamera.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/dualcamera.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         Advanced dual-camera<br /> system
                                     </Text>
@@ -147,7 +147,7 @@ export const KeepExploringSection = () => {
                                     </Stack>
                                 </Stack>
                                 <Stack alignItems={{ base: 'start', md: 'center' }} justifyContent={'start'}>
-                                    <Image src='./src/assets/images/batteryicon.png' alt='iphone' w={14} objectFit='contain' />
+                                    <Image src='./images/batteryicon.png' alt='iphone' w={14} objectFit='contain' />
                                     <Text color={'white'} textAlign={{ base: 'left', md: 'center' }} fontSize={{ base: 'md', md: '2xl' }} lineHeight={'120%'} fontWeight={600}>
                                         Up to 26 hours video<br /> playback
                                     </Text>

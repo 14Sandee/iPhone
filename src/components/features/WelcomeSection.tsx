@@ -34,14 +34,14 @@ export const WelcomeSection = () => {
 export const MobileVideo = () => {
     return (
         <video autoPlay muted id="mobileVideo">
-            <source src='./src/assets/videos/mobileLanding.mp4' type='video/mp4' />
+            <source src='./videos/mobileLanding.mp4' type='video/mp4' />
         </video>
     )
 }
 export const DesktopVideo = () => {
     return (
         <video autoPlay muted id="myVideo">
-            <source src="./src/assets/videos/landingVideo.mp4" type="video/mp4" />
+            <source src="./videos/landingVideo.mp4" type="video/mp4" />
         </video>
     )
 }

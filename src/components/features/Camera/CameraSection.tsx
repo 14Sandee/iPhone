@@ -49,7 +49,7 @@ export const CameraSection = () => {
                         <Stack w={'full'} alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
                             <Box w={'full'}>
                                 <motion.div ref={scaleRef} style={{ scale: scrollYProgress }}>
-                                    <Image pos={'sticky'} src='./src/assets/images/chameleon.jpeg' alt='camera' w={'100%'} />
+                                    <Image pos={'sticky'} src='./images/chameleon.jpeg' alt='camera' w={'100%'} />
                                 </motion.div>
                                 <Text maxW={'5xl'} mx={{ base: 8, md: 'auto' }} color={'#86868b'} textAlign={'left'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600} mt={4}>
                                     A green iguana, captured by the 48MP Main camera
@@ -159,7 +159,7 @@ export const CameraScreen = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
                         >
-                            <Image src='./src/assets/images/cameraApp.jpeg' alt='camera' w={'100%'} h={'100%'} />
+                            <Image src='./images/cameraApp.jpeg' alt='camera' w={'100%'} h={'100%'} />
                         </motion.div>}
 
                     </Box>

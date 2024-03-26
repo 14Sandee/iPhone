@@ -25,7 +25,7 @@ export const GigaSection = () => {
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <HStack spacing={8} maxW={'5xl'} mx={'auto'} justifyContent={'space-between'} alignItems={'start'} overflow={'hidden'}>
                             <Stack minH={{ base: 'md', md: '3xl' }} pos={'relative'} overflow={'hidden'}>
-                                <Image src='./src/assets/images/gigablast.jpeg' alt='action' w={'full'} h={'full'} objectFit='contain' />
+                                <Image src='./images/gigablast.jpeg' alt='action' w={'full'} h={'full'} objectFit='contain' />
                             </Stack>
                         </HStack>
                         <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={'auto'} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>

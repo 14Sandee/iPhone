@@ -29,13 +29,13 @@ export const IosSection = () => {
                                 </Stack>
                                 <SimpleGrid columns={[3, 3]} spacing={{ base: 5, md: 12 }} mt={8}>
                                     <Stack spacing={4}>
-                                        <Image src='./src/assets/images/contact1.jpeg' alt='contact1' w={'full'} objectFit='contain' />
+                                        <Image src='./images/contact1.jpeg' alt='contact1' w={'full'} objectFit='contain' />
                                     </Stack>
                                     <Stack spacing={4}>
-                                        <Image src='./src/assets/images/contact2.jpeg' alt='contact1' w={'full'} objectFit='contain' />
+                                        <Image src='./images/contact2.jpeg' alt='contact1' w={'full'} objectFit='contain' />
                                     </Stack>
                                     <Stack spacing={4}>
-                                        <Image src='./src/assets/images/contact3.jpeg' alt='contact1' w={'full'} objectFit='contain' />
+                                        <Image src='./images/contact3.jpeg' alt='contact1' w={'full'} objectFit='contain' />
                                     </Stack>
                                 </SimpleGrid>
                                 <SimpleGrid ref={textRef} columns={[1, 3]} spacing={{ base: 5, md: 12 }} mx={{ base: 12, md: 'auto' }} mt={8}>

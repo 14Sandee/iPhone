@@ -15,7 +15,7 @@ export const DesignedSection = () => {
                         <Box overflow={'hidden'} >
                             <Box maxW={'5xl'} mx={'auto'} px={{ base: 4, md: 20 }}>
                                 <Stack spacing={4} py={{ base: 10, md: 20 }} px={{ base: 16, md: 20 }} alignItems={'start'}>
-                                    <Image src='./src/assets/images/designed.jpeg' alt='designed' h={{ base: 10, md: 16 }} objectFit='contain' />
+                                    <Image src='./images/designed.jpeg' alt='designed' h={{ base: 10, md: 16 }} objectFit='contain' />
                                     <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '6xl' }} fontWeight={600}>
                                         Designed to<br /> make a difference.
                                     </Heading>
