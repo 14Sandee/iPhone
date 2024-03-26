@@ -32,7 +32,7 @@ export const CameraSection = () => {
     }
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
-        <Box h={{ base: '320vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '340vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key='camera-section'>
                 <Box maxW={'5xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <motion.div key='camera' ref={scrollRef} initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
@@ -44,7 +44,7 @@ export const CameraSection = () => {
                         </Text>
                     </motion.div>
                 </Box>
-                <Box ref={ref} pos={'relative'} w='full' h='85%'>
+                <Box ref={ref} pos={'relative'} w='full' h={{ base: '85%', md: '85%' }}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Stack w={'full'} alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
                             <Box w={'full'}>
@@ -145,7 +145,7 @@ export const CameraScreen = () => {
     const isInView = useInView(ref, { once: true })
     const isInView2 = useInView(textRef, { once: false })
     return (
-        <Stack maxW={'5xl'} minH={{ md: '4xl' }} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
+        <Stack maxW={'5xl'} minH={{ base: '4xl', md: '4xl' }} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
             <AnimatePresence key='camera'>
                 <HStack flexDirection={{ base: 'column', md: 'row' }} left={0} spacing={{ base: 10, md: 20 }} justifyContent={'center'}>
                     <Box ref={ref} maxW={{ base: '65%', md: '30%' }}>
@@ -159,7 +159,7 @@ export const CameraScreen = () => {
                         </motion.div>}
 
                     </Box>
-                    <Box maxW={{ base: '65%', md: '31%' }} w={'sm'} ref={textRef}>
+                    <Box maxW={{ base: '65%', md: '31%' }} h={{ base: 'sm', md: 'auto' }} w={'sm'} ref={textRef}>
                         {isInView2 &&
                             <motion.div
                                 key='camera-screen2'

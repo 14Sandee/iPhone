@@ -8,7 +8,7 @@ export const DesignedSection = () => {
     const ref = useRef(null)
     const isInView2 = useInView(ref, { once: true })
     return (
-        <Box ref={ref} h={{ base: '110vh', md: '110vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
+        <Box ref={ref} h={{ base: '120vh', md: '110vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
             <AnimatePresence key='design'>
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h={{ base: '90%', md: '95%' }} pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
@@ -22,10 +22,10 @@ export const DesignedSection = () => {
                                 </Stack>
                                 <Divider w={{ base: '70%', md: 'auto' }} mx={'auto'} orientation='horizontal' />
                                 <HStack mx={{ base: 16, md: 0 }} flexDirection={{ base: 'column', md: 'row' }} mt={12} spacing={{ base: 10, md: 10 }} alignItems={'start'} justifyContent={'space-between'}>
-                                    <Text maxW={{ base: '85%', md: '50%' }} color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
+                                    <Text maxW={{ base: '100%', md: '50%' }} color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                         <Text as={'span'} color={'#fff'}>What matters to you matters to Apple too.</Text> From privacy protections that give you more control over your data. To using more recycled materials that minimise environmental impact. To creating built‑in features that make iPhone accessible to all.
                                     </Text>
-                                    <Stack maxW={{ base: '85%', md: '40%' }} flex={1} spacing={0}>
+                                    <Stack maxW={{ base: '100%', md: '40%' }} flex={1} spacing={0}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>The internal structural frame of iPhone 15 Pro has</Text>
                                         <Text color={'#fff'} fontSize={{ base: 'xl', md: '4xl' }} fontWeight={600} lineHeight={'120%'}>100% recycled aluminium</Text>
                                     </Stack>

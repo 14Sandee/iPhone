@@ -9,9 +9,9 @@ export const ZoomSection = () => {
     const ref = useRef(null)
     const isInView2 = useInView(ref, { once: true })
     return (
-        <Box h={{ base: '170vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '180vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key='zoom'>
-                <Box pos={'relative'} w='full' h={{ base: '75%', md: '64%' }}>
+                <Box pos={'relative'} w='full' h={{ base: '80%', md: '64%' }}>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={'auto'} overflow={'hidden'}>
                         <Stack alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
                             <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600}>

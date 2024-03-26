@@ -12,7 +12,7 @@ export const GigaSection = () => {
     const isInView = useInView(textRef, { once: true })
     const isInView3 = useInView(ref2, { once: true })
     return (
-        <Box ref={ref} h={{ base: '160vh', md: '250vh' }} as='section' pos={'relative'} bg="#000">
+        <Box ref={ref} h={{ base: '170vh', md: '250vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key='giga'>
                 <Box mb={{ base: 10, md: 20 }} maxW={'4xl'} pt={{ base: 10, md: 40 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ base: 'center', md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <Stack w={{ base: '70%', md: 'auto' }} spacing={0} mx={{ base: 2, md: 4 }}>
@@ -24,7 +24,7 @@ export const GigaSection = () => {
                 <Box pos={'relative'} w='full' h={{ base: '80%', md: '70%' }}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <HStack spacing={8} maxW={'5xl'} mx={'auto'} justifyContent={'space-between'} alignItems={'start'} overflow={'hidden'}>
-                            <Stack minH={{ base: 'md', md: '3xl' }} pos={'relative'} overflow={'hidden'}>
+                            <Stack minH={{ base: 'sm', md: '3xl' }} pos={'relative'} overflow={'hidden'}>
                                 <Image src='./images/gigablast.jpeg' alt='action' w={'full'} h={'full'} objectFit='contain' />
                             </Stack>
                         </HStack>

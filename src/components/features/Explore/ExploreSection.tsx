@@ -18,9 +18,9 @@ export const ExploreSection = () => {
         target: scrollRef
     });
     return (
-        <Box ref={exploreRef} h={{ base: '280vh', md: '255vh' }} as='section' pos={'relative'} bg="#101010">
+        <Box ref={exploreRef} h={{ base: '300vh', md: '255vh' }} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence key='explore'>
-                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
+                <Box maxW={'7xl'} pt={{ base: 16, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
                             <motion.div key='explore' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
@@ -31,7 +31,7 @@ export const ExploreSection = () => {
                         </>
                     }
                 </Box>
-                <Box pos={'relative'} w='full' h={{ base: '82%', md: '63%' }}>
+                <Box pos={'relative'} w='full' h={{ base: '80%', md: '63%' }}>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={{ base: 8, md: 'auto' }} overflow={'hidden'}>
                         <Stack spacing={0} mx={{ base: 4, md: 4 }}>
                             <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600}>

@@ -15,7 +15,7 @@ export const CloserLookSection = () => {
     return (
         <Box ref={closerRef} h={{ base: '90vh', md: '140vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key='closerlook'>
-                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
+                <Box maxW={'7xl'} pt={{ base: 16, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
                             <motion.div key='closer' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
@@ -30,7 +30,7 @@ export const CloserLookSection = () => {
                     <Box w={'full'} position={'absolute'} top={0}>
                         <Box maxW={'7xl'} mx={'auto'} overflow={'hidden'}>
                             <HStack pt={{ base: 8, md: 16 }} justifyContent={'center'} >
-                                <Image src={data[active - 1].url} alt='closerLook' objectFit='cover' w={'auto'} h={{ base: 'xs', md: 'lg' }} />
+                                <Image src={data[active - 1].url} alt='closerLook' objectFit='cover' w={'auto'} h={{ base: '2xs', md: 'lg' }} />
                             </HStack>
                         </Box>
                     </Box>

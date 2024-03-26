@@ -12,7 +12,7 @@ export const ChipSection = () => {
     const textRef = useRef(null);
     const isInView3 = useInView(textRef, { once: true })
     return (
-        <Box ref={chipRef} h={{ base: '185vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
+        <Box ref={chipRef} h={{ base: '180vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key={'chip'}>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={{ base: 0, md: 10 }} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
@@ -25,7 +25,7 @@ export const ChipSection = () => {
                         </>
                     }
                 </Box>
-                <Box pos={'relative'} w='full' h={{ base: '55%', md: '51%' }}>
+                <Box pos={'relative'} w='full' h={{ base: '60%', md: '51%' }}>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={'auto'} overflow={'hidden'}>
                         <Stack alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
                             <Heading as='h2' color='#fff' textAlign={'center'} fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600}>

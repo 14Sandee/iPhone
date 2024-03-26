@@ -42,9 +42,9 @@ export const HighlightsSection = () => {
     };
 
     return (
-        <Box ref={higlightsRef} h={{ base: '125vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
+        <Box ref={higlightsRef} h={{ base: '135vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence key='highlight-section'>
-                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
+                <Box maxW={'7xl'} pt={{ base: 16, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
                             <motion.div key='highlight' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
