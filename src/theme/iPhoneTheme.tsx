@@ -14,5 +14,10 @@ export const iPhoneTheme = extendTheme({
             800: "#003972",
             900: "#00264c",
         },
+    },
+    fontSizes: {
+        "2.5xl": "1.75rem",
+        "4.5xl": "2.75rem",
+        "5.5xl": " 3.5rem"
     }
 })
