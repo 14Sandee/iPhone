@@ -1,4 +1,4 @@
-import { Box, Button, ButtonGroup, HStack, Heading, Link, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, ButtonGroup, HStack, Heading, Link, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
 import React, { ReactNode, RefObject, useEffect, useRef, useState } from 'react'
 import { IoChevronForward, IoPlayCircleOutline } from 'react-icons/io5'
 import { AnimatePresence, motion, useInView } from 'framer-motion'
@@ -44,7 +44,7 @@ export const HighlightsSection = () => {
     return (
         <Box ref={higlightsRef} h={'130vh'} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
-                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
+                <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
                             <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
@@ -92,45 +92,8 @@ export const HighlightsSection = () => {
                                 </Swiper>
                             }
                         </Box>
-                        {/* <Swiper
-                            cssMode={true}
-                            spaceBetween={30}
-                            slidesPerView={'auto'}
-                            centeredSlides={true}
-                            pagination={{
-                                clickable: true,
-                                renderBullet: function (index, className) {
-                                    return ``;
-                                }
-                            }}
-                            modules={[Pagination]}
-                            onSwiper={setSwiper}
-                            onSlideChange={(swiper) => setActive(swiper.activeIndex)}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide>
-                                <Box maxW={'7xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
-                                    <VideoSlide1 active={active} />
-                                </Box>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Box maxW={'7xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
-                                    <VideoSlide2 active={active} />
-                                </Box>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Box maxW={'7xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
-                                    <VideoSlide3 active={active} />
-                                </Box>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <Box maxW={'7xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
-                                    <VideoSlide4 active={active} />
-                                </Box>
-                            </SwiperSlide>
-                        </Swiper> */}
                     </Box>
-                    <SectionButton isInView={isInView2}>
+                    <SectionButton isInView={isInView2} width={{ base: '168px', md: '168px' }}>
                         <HStack h={'58px'} px={6} justifyContent={'space-between'} alignItems={'center'} >
                             {[...Array(4)].map((_, i) => (
                                 <Box cursor={'pointer'} key={i} className={`pagination ${active === i ? 'active' : ''}`} bg='gray.100' borderRadius='50px' onClick={() => handleSlide(i)} />
@@ -143,7 +106,8 @@ export const HighlightsSection = () => {
     )
 }
 
-export const SectionButton = ({ isInView, children, text, width = "168px" }: { isInView: boolean, children?: ReactNode, text?: string, width?: string }) => {
+export const SectionButton = ({ isInView, children, text, width }: { isInView: boolean, children?: ReactNode, text?: string, width?: { base: string, md?: string } }) => {
+    const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
         <HStack spacing={8} w='full' h='full' justifyContent={'center'} alignItems={'flex-end'}>
             {
@@ -173,12 +137,12 @@ export const SectionButton = ({ isInView, children, text, width = "168px" }: { i
                                 scale: [0, 1, 1, 1],
                                 borderRadius: ["50%", "50%", "999px", "999px"],
                                 outlineWidth: ["10px", "10px", "0px", "0px"],
-                                width: ["56px", "56px", "56px", width],
+                                width: ["56px", "56px", "56px", isMobile && width ? width.base : width?.md],
                             }}
                             exit={{
                                 scale: [1, 1, 1, 0],
                                 borderRadius: ["999px", "999px", "50%", "50%",],
-                                width: [width, "56px", "56px", "56px"],
+                                width: [isMobile && width ? width.base : width?.md, "56px", "56px", "56px"],
                             }}
                             transition={{
                                 duration: 1.2,

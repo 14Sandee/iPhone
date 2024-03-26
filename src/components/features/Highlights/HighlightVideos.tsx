@@ -24,7 +24,7 @@ export const VideoSlide = ({ dataArray, data, activeIndex, index }: VideoProps) 
         <Box w={'full'} pos={"relative"} height={'2xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
             {data.text &&
                 <Stack spacing={0} pos={'absolute'} top={10} left={10} w={'full'} h={'full'}>
-                    {data.text.map(t => <Text key={t} color={'white'} fontSize={'3xl'} fontWeight={600} lineHeight={"125%"}>{t}</Text>)}
+                    {data.text.map(t => <Text key={t} color={'white'} fontSize={{ base: 'xl', md: '3xl' }} fontWeight={600} lineHeight={"125%"}>{t}</Text>)}
                 </Stack>
             }
             <video ref={videoRef} style={{

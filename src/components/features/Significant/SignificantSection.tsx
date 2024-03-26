@@ -11,7 +11,7 @@ export const SignificantSection = () => {
     const [active, setActive] = useState(0)
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
-        <Box ref={significantRef} h={'350vh'} as='section' pos={'relative'} bg="#101010">
+        <Box ref={significantRef} h={'205vh'} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
@@ -37,6 +37,7 @@ export const SignificantSection = () => {
                                 <Stack spacing={4}>
                                     <Text color='#86868b' fontSize={{ base: 'sm', md: 'md' }}>{item.content}</Text>
                                     {isMobile && <Image src={data[active].url} alt='iphone' w={'full'} h={{ base: '3xs', md: 'lg' }} objectFit='contain' />}
+
                                 </Stack>
                             </AccordionPanel>
                         </AccordionItem>)}
@@ -49,7 +50,7 @@ export const SignificantSection = () => {
 
                 </HStack>
                 <ShopAtApple />
-                <KeepExploringSection />
+                {/* <KeepExploringSection /> */}
             </AnimatePresence >
         </Box >
     )

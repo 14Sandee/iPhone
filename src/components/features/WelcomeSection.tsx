@@ -1,16 +1,12 @@
-import { Box, Button, Heading, Stack, Text, calc, useBreakpointValue } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import { Box, Button, Heading, Stack, Text, useBreakpointValue } from '@chakra-ui/react'
+import React from 'react'
 import { motion } from 'framer-motion'
 
 export const WelcomeSection = () => {
-    const [isPlaying, setIsPlaying] = useState(true)
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
 
     return (
         <Stack as={'section'} w='full' bg={'black'} h='calc(100vh - 40px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
-            {/* {isPlaying ? <video autoPlay muted id="myVideo" onPause={() => setIsPlaying(false)}>
-                <source src="./src/assets/videos/landingVideo.mp4" type="video/mp4" />
-            </video> : <img src="./src/assets/images/landingImage.jpeg" alt="landingImage" />} */}
             <Stack w={'full'} mt={{ base: 2, md: 10 }}>
                 <Stack w='full' pos={'relative'} py={{ base: 8, md: 16 }} alignItems={'center'}>
                     <Heading as={'h1'} top={{ base: -5, md: 'auto' }} color='#BEB8AE' fontSize={{ base: '2xl', md: '3xl' }} fontWeight={600} pos={'absolute'}>
