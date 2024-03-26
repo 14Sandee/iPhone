@@ -32,6 +32,10 @@
     transform: rotate(-45deg) translateY(-7px);
 }
 
+.header-background {
+    background: #000000a6;
+    backdrop-filter: blur(7px);
+}
 
 @media screen and (max-width: 824px) {
     .nav-link {
