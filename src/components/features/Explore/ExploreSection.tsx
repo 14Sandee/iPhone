@@ -18,7 +18,7 @@ export const ExploreSection = () => {
         target: scrollRef
     });
     return (
-        <Box ref={exploreRef} h={{ base: '280vh', md: '240vh' }} as='section' pos={'relative'} bg="#101010">
+        <Box ref={exploreRef} h={{ base: '280vh', md: '255vh' }} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {

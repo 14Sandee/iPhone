@@ -7,8 +7,8 @@ export const WelcomeSection = () => {
 
     return (
         <Stack as={'section'} w='full' bg={'black'} h='calc(100vh - 40px)' py={{ base: 10, md: 16 }} justifyContent={'center'}>
-            <Stack w={'full'} mt={{ base: 2, md: 10 }}>
-                <Stack w='full' pos={'relative'} py={{ base: 8, md: 16 }} alignItems={'center'}>
+            <Stack w={'full'} mt={{ base: 2, md: 8 }}>
+                <Stack w='full' pos={'relative'} py={{ base: 8, md: 12 }} alignItems={'center'}>
                     <Heading as={'h1'} top={{ base: -5, md: 'auto' }} color='#BEB8AE' fontSize={{ base: '2xl', md: '3xl' }} fontWeight={600} pos={'absolute'}>
                         iPhone 15 Pro
                     </Heading>
@@ -16,7 +16,6 @@ export const WelcomeSection = () => {
                         {isMobile ? <MobileVideo /> : <DesktopVideo />}
                     </Stack>
                 </Stack>
-
                 <Stack spacing={8} w='full' alignItems={'center'}>
                     <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}>
                         <Button rounded={'full'} size={'lg'} fontWeight={400} colorScheme='primary'>Buy</Button>

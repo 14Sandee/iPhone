@@ -8,7 +8,7 @@ export const DesignedSection = () => {
     const ref = useRef(null)
     const isInView2 = useInView(ref, { once: true })
     return (
-        <Box ref={ref} h={{ base: '110vh', md: '100vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
+        <Box ref={ref} h={{ base: '110vh', md: '110vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
             <AnimatePresence>
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h={{ base: '90%', md: '95%' }} pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>

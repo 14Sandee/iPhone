@@ -42,7 +42,7 @@ export const HighlightsSection = () => {
     };
 
     return (
-        <Box ref={higlightsRef} h={'130vh'} as='section' pos={'relative'} bg="#101010">
+        <Box ref={higlightsRef} h={{ base: '125vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
@@ -67,7 +67,7 @@ export const HighlightsSection = () => {
                         </>
                     }
                 </Box>
-                <Box bg="#101010" pos={'relative'} w='full' h='70%' backdropBlur='7px'>
+                <Box bg="#101010" pos={'relative'} w='full' h={{ base: '75%', md: '70%' }} backdropBlur='7px'>
                     <Box w={'full'} position={'absolute'} top={0}>
                         <Box ref={ref} maxW={'7xl'} height={'2xl'} mx={'auto'} rounded={'3xl'} overflow={'hidden'}>
                             {
@@ -101,8 +101,8 @@ export const HighlightsSection = () => {
                         </HStack>
                     </SectionButton>
                 </Box>
-            </AnimatePresence>
-        </Box>
+            </AnimatePresence >
+        </Box >
     )
 }
 

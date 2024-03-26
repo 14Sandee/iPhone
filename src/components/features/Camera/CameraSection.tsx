@@ -32,7 +32,7 @@ export const CameraSection = () => {
     }
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
-        <Box h={{ base: '320vh', md: '442vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '320vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
                 <Box maxW={'5xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <motion.div ref={scrollRef} initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
@@ -94,7 +94,7 @@ export const CameraSection = () => {
                                         return (
                                             <>
                                                 {active === index && <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
-                                                    <Text color={'white'} textAlign={{ base: 'center' }} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>
+                                                    <Text color={'white'} textAlign={{ base: 'center', md: 'left' }} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>
                                                         {data[active].text}
                                                         <Text as={'span'} color={'#86868b'}> {data[active].spanText}</Text>
                                                     </Text>

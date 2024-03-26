@@ -13,7 +13,7 @@ export const CloserLookSection = () => {
     const isInView2 = useInView(ref, { once: false })
 
     return (
-        <Box ref={closerRef} h={{ base: '90vh', md: '130vh' }} as='section' pos={'relative'} bg="#000">
+        <Box ref={closerRef} h={{ base: '90vh', md: '140vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
@@ -26,7 +26,7 @@ export const CloserLookSection = () => {
                         </>
                     }
                 </Box>
-                <Box ref={ref} pos={'relative'} w='full' h={'70%'}>
+                <Box ref={ref} pos={'relative'} w='full' h={'68%'}>
                     <Box w={'full'} position={'absolute'} top={0}>
                         <Box maxW={'7xl'} mx={'auto'} overflow={'hidden'}>
                             <HStack pt={{ base: 8, md: 16 }} justifyContent={'center'} >
