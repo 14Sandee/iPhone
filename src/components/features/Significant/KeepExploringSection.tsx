@@ -23,11 +23,11 @@ export const KeepExploringSection = () => {
 
     return (
         <Box ref={ref} h={{ base: '160vh', md: '230vh' }} bg={'#101010'} as='section' pos={'relative'} pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
-            <AnimatePresence>
+            <AnimatePresence key='explore'>
                 <Box ref={keepExploringRef} maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                            <motion.div key='compare' style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <HStack flexDirection={{ base: 'column', md: 'row' }} w={'full'} justifyContent={'space-between'} alignItems={{ base: 'start', md: 'flex-end' }} spacing={4}>
                                     <Heading maxW={{ base: '80%', md: 'auto' }} as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600}>
                                         Keep exploring iPhone.
@@ -44,7 +44,7 @@ export const KeepExploringSection = () => {
                     <Stack pos={'absolute'} maxW={'full'} mx={{ base: 4, md: 'auto' }} spacing={12} w={{ base: '90%', md: 'full' }} minH={'xl'} px={{ base: 2, md: 16 }} py={{ base: 10, md: 20 }} rounded={20} bg='black' justifyContent={'space-between'} >
                         <HStack maxW={{ base: 'full', md: '70%' }} mx={{ base: 0, md: 'auto' }} px={{ base: 4, md: 20 }} spacing={{ base: 10, md: 24 }} alignItems={'start'} justifyContent={'center'}>
                             <Stack spacing={8} alignItems={'center'}>
-                                <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
+                                <motion.div key='compare' initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
                                     <Image cursor={'pointer'} src={'./images/iphone15pro.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
                                 </motion.div>
                                 <Stack alignItems={{ base: 'start', md: 'center' }}>
@@ -66,7 +66,7 @@ export const KeepExploringSection = () => {
                                 </HStack>
                             </Stack>
                             <Stack spacing={8} alignItems={'center'}>
-                                <motion.div initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
+                                <motion.div key='compare' initial={{ scale: 1 }} whileHover={{ scale: 1.03 }} transition={{ duration: 0.5, ease: 'easeInOut' }}>
                                     <Image cursor={'pointer'} src={'./images/iphone15.jpeg'} alt='iphone' w={'full'} h={{ base: 44, md: 'sm' }} objectFit='contain' />
                                 </motion.div>
                                 <Stack alignItems={{ base: 'start', md: 'center' }}>
@@ -157,7 +157,7 @@ export const KeepExploringSection = () => {
                     </Stack>
                     <SectionButton isInView={isInView2} width={{ base: '290px', md: '310px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='compare' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Compare all iPhone models</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoChevronForward fontSize={24} fontWeight={700} />} />

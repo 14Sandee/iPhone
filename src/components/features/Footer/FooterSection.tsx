@@ -5,7 +5,7 @@ import React from 'react'
 export const FooterSection = () => {
     return (
         <Box as='footer' pos={'relative'} bg="#000" py={{ base: 20, md: 20 }}>
-            <AnimatePresence>
+            <AnimatePresence key='footer'>
                 <Box maxW={'7xl'} pb={{ base: 5, md: 10 }} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <Heading as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600}>
                         iPhone

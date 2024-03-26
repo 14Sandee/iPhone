@@ -43,22 +43,22 @@ export const HighlightsSection = () => {
 
     return (
         <Box ref={higlightsRef} h={{ base: '125vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
-            <AnimatePresence>
+            <AnimatePresence key='highlight-section'>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
-                            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                            <motion.div key='highlight' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <Heading as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5.5xl' }} fontWeight={600}>
                                     Get the highlights.
                                 </Heading>
                             </motion.div>
                             <ButtonGroup flexDirection={{ base: 'column', md: 'row' }} gap={{ base: 2, md: 4 }} spacing={{ base: 0, md: 4 }}>
-                                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}>
+                                <motion.div key='highlight2' initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.8 }}>
                                     <Button colorScheme='primary' variant={'link'} fontSize={'xl'} fontWeight={500} rightIcon={<IoPlayCircleOutline fontSize={20} />}>
                                         Watch the film
                                     </Button>
                                 </motion.div>
-                                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}>
+                                <motion.div key='highlight3' initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1 }}>
                                     <Button colorScheme='primary' variant={'link'} fontSize={'xl'} fontWeight={500} rightIcon={<IoChevronForward fontSize={16} />}>
                                         Watch the event
                                     </Button>
@@ -111,7 +111,7 @@ export const SectionButton = ({ isInView, children, text, width }: { isInView: b
     return (
         <HStack spacing={8} w='full' h='full' justifyContent={'center'} alignItems={'flex-end'}>
             {
-                isInView && <AnimatePresence>
+                isInView && <AnimatePresence key='highlight'>
                     <Stack position={'sticky'} bottom={10} alignItems={'center'} zIndex={9999}>
                         {text && <motion.div key='text'
                             style={{ backgroundColor: 'rgba(0,0,0,0.5)', padding: '2px' }}

@@ -9,7 +9,7 @@ export const CrashDetection = () => {
     const isInView2 = useInView(ref, { once: true })
     return (
         <Box ref={ref} h={{ base: '110vh', md: '130vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }}>
-            <AnimatePresence>
+            <AnimatePresence key='crash'>
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Box overflow={'hidden'} >
@@ -31,7 +31,7 @@ export const CrashDetection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '240px', md: '260px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='crash' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Learn how it all works</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />

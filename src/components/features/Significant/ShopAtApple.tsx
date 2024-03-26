@@ -22,11 +22,11 @@ export const ShopAtApple = () => {
     }
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
-        <AnimatePresence>
+        <AnimatePresence key='shop'>
             <Box ref={shopRef} mt={20} maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                 {
                     isInView && <>
-                        <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                        <motion.div key='shop' style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                             <HStack flexDirection={{ base: 'column', md: 'row' }} w={'full'} justifyContent={'space-between'} alignItems={{ base: 'start', md: 'flex-end' }} spacing={4}>
                                 <Heading maxW={{ base: '80%', md: 'auto' }} as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600}>
                                     Ways to shop and save at Apple.

@@ -13,7 +13,7 @@ export const GigaSection = () => {
     const isInView3 = useInView(ref2, { once: true })
     return (
         <Box ref={ref} h={{ base: '160vh', md: '250vh' }} as='section' pos={'relative'} bg="#000">
-            <AnimatePresence>
+            <AnimatePresence key='giga'>
                 <Box mb={{ base: 10, md: 20 }} maxW={'4xl'} pt={{ base: 10, md: 40 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ base: 'center', md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <Stack w={{ base: '70%', md: 'auto' }} spacing={0} mx={{ base: 2, md: 4 }}>
                         <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600}>
@@ -28,10 +28,10 @@ export const GigaSection = () => {
                                 <Image src='./images/gigablast.jpeg' alt='action' w={'full'} h={'full'} objectFit='contain' />
                             </Stack>
                         </HStack>
-                        <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={'auto'} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
+                        <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={{ base: 16, md: 'auto' }} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'start', md: 'start' }} justifyContent={'space-around'}>
                             {isInView && <>
                                 <Box maxW={{ base: '70%', md: '33%' }}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key='giga' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                             iPhone 15 Pro is the first iPhone to support USB 3,4 for a
                                             <Text as={'span'} color={'#fff'}> huge leap in data transfer speeds</Text> and faster pro workflows than ever before.
@@ -39,7 +39,7 @@ export const GigaSection = () => {
                                     </motion.div>
                                 </Box>
                                 <Stack maxW={{ base: '70%', md: '33%' }} flex={1} spacing={0}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key='giga2' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Stack spacing={0}>
                                             <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>Upto</Text>
                                             <Text color={'#fff'} fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600} lineHeight={'120%'}>20x faster</Text>
@@ -52,7 +52,7 @@ export const GigaSection = () => {
                         <HStack ref={ref2} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={'auto'} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
                             {isInView3 && <>
                                 <Box maxW={{ base: '70%', md: '33%' }}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key='giga3' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                             The new USB‑C connector lets you
                                             <Text as={'span'} color={'#fff'}> charge your Mac or iPad with the same cable you use to charge iPhone 15 Pro</Text>. Bye‑bye, cable clutter.
@@ -60,7 +60,7 @@ export const GigaSection = () => {
                                     </motion.div>
                                 </Box>
                                 <Box maxW={{ base: '70%', md: '33%' }}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key='giga4' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                             And with all‑new Wi‑Fi 6E5 you'll get <Text as={'span'} color={'#fff'}>two times faster wireless speeds</Text>. So you can upload, download, and transfer files in a flash.
                                         </Text>
@@ -71,7 +71,7 @@ export const GigaSection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '240px', md: '250px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='giga5' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Explore connectivity</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />

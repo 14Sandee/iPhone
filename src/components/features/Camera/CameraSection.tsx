@@ -33,9 +33,9 @@ export const CameraSection = () => {
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
         <Box h={{ base: '320vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
-            <AnimatePresence>
+            <AnimatePresence key='camera-section'>
                 <Box maxW={'5xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
-                    <motion.div ref={scrollRef} initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
+                    <motion.div key='camera' ref={scrollRef} initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
                         <Heading as='h2' color='#fff' fontSize={{ base: '4xl', md: '7xl' }} lineHeight={{ base: '120%', md: 'auto' }} fontWeight={600}>
                             A camera that captures your wildest imagination.
                         </Heading>
@@ -48,7 +48,7 @@ export const CameraSection = () => {
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Stack w={'full'} alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
                             <Box w={'full'}>
-                                <motion.div ref={scaleRef} style={{ scale: scrollYProgress }}>
+                                <motion.div key='camera2' ref={scaleRef} style={{ scale: scrollYProgress }}>
                                     <Image pos={'sticky'} src='./images/chameleon.jpeg' alt='camera' w={'100%'} />
                                 </motion.div>
                                 <Text maxW={'5xl'} mx={{ base: 8, md: 'auto' }} color={'#86868b'} textAlign={'left'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600} mt={4}>
@@ -76,33 +76,28 @@ export const CameraSection = () => {
                                     onSlideChange={(swiper) => setActive(swiper.activeIndex)}
                                     className="mySwiper"
                                 >
-                                    {data.map((d, index) => {
-                                        return (
-                                            <SwiperSlide key={index}>
-                                                <Box w={'full'} className={`slide-container ${active === index ? 'active' : ''}`} aspectRatio={{ base: 0.8, md: 1.4 }}>
-                                                    <Image src={d.url} alt={d.spanText} w={'100%'} h={'100%'} objectFit={'cover'} objectPosition={'center'} />
-                                                </Box>
-                                            </SwiperSlide>
-                                        )
-                                    })}
+                                    {data.map((d, index) => <SwiperSlide key={d.id}>
+                                        <Box w={'full'} className={`slide-container ${active === index ? 'active' : ''}`} aspectRatio={{ base: 0.8, md: 1.4 }}>
+                                            <Image src={d.url} alt={d.spanText} w={'100%'} h={'100%'} objectFit={'cover'} objectPosition={'center'} />
+                                        </Box>
+                                    </SwiperSlide>
+                                    )}
                                 </Swiper>
                                 <HStack maxW={'4xl'} w='full' mx={{ base: 'auto', md: 'auto' }} spacing={4} justifyContent={{ base: 'center', md: 'space-between' }} alignItems={'center'}>
                                     {!isMobile &&
                                         <Box w={{ base: '80%', md: '80%' }} h={'full'}>
                                         </Box>}
-                                    {data.map((d, index) => {
-                                        return (
-                                            <>
-                                                {active === index && <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
-                                                    <Text color={'white'} textAlign={{ base: 'center', md: 'left' }} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>
-                                                        {data[active].text}
-                                                        <Text as={'span'} color={'#86868b'}> {data[active].spanText}</Text>
-                                                    </Text>
-                                                </motion.div>
-                                                }
-                                            </>
-                                        )
-                                    })}
+                                    {data.map((d, index) =>
+                                        <>
+                                            {active === index && <motion.div key={d.text} style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                                <Text color={'white'} textAlign={{ base: 'center', md: 'left' }} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>
+                                                    {data[active].text}
+                                                    <Text as={'span'} color={'#86868b'}> {data[active].spanText}</Text>
+                                                </Text>
+                                            </motion.div>
+                                            }
+                                        </>
+                                    )}
                                     {!isMobile &&
                                         <ButtonGroup spacing={4}>
                                             <IconButton bg='#424245b3' boxSize={10} backdropBlur={'7px'} _hover={{ bg: '#424245d3' }} rounded={'full'} color={'white'} isDisabled={active < 1} onClick={handlePrev} aria-label='next' icon={<IoChevronBack fontSize={24} />} />
@@ -130,7 +125,7 @@ export const CameraSection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '260px', md: '280px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='camera-button' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Zoom in on the cameras</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />
@@ -151,10 +146,11 @@ export const CameraScreen = () => {
     const isInView2 = useInView(textRef, { once: false })
     return (
         <Stack maxW={'5xl'} minH={{ md: '4xl' }} mx={'auto'} py={{ base: 20, md: 40 }} spacing={10}>
-            <AnimatePresence>
+            <AnimatePresence key='camera'>
                 <HStack flexDirection={{ base: 'column', md: 'row' }} left={0} spacing={{ base: 10, md: 20 }} justifyContent={'center'}>
                     <Box ref={ref} maxW={{ base: '65%', md: '30%' }}>
                         {isInView && <motion.div
+                            key='camera-screen'
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5 }}
@@ -166,6 +162,7 @@ export const CameraScreen = () => {
                     <Box maxW={{ base: '65%', md: '31%' }} w={'sm'} ref={textRef}>
                         {isInView2 &&
                             <motion.div
+                                key='camera-screen2'
                                 initial={{ opacity: 0, y: 80 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5 }}

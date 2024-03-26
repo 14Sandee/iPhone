@@ -12,12 +12,12 @@ export const ChipSection = () => {
     const textRef = useRef(null);
     const isInView3 = useInView(textRef, { once: true })
     return (
-        <Box ref={chipRef} h={{ base: '170vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
-            <AnimatePresence>
+        <Box ref={chipRef} h={{ base: '185vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
+            <AnimatePresence key={'chip'}>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={{ base: 0, md: 10 }} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                            <motion.div key='chip' style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <HStack w={'full'} justifyContent={'center'} spacing={0}>
                                     <Image src='./images/a17chip.jpeg' alt='chip' boxSize={{ base: 32, md: 44 }} />
                                 </HStack>
@@ -50,10 +50,10 @@ export const ChipSection = () => {
                                     Honkai: Star Rail
                                 </Text>
                             </Box>
-                            <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
+                            <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'start', md: 'start' }} mx={{ base: 16, md: 'auto' }} justifyContent={'space-around'}>
                                 {isInView3 && <>
-                                    <Box maxW={{ base: '85%', md: '33%' }}>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <Box maxW={{ base: '95%', md: '33%' }}>
+                                        <motion.div key='chip-2' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={4}>
                                                 <Text color={'#86868b'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600}>
                                                     A17 Pro is an entirely new class of iPhone chip that delivers our <Text as={'span'} color={'#fff'}>best graphics performance by far</Text>
@@ -65,8 +65,8 @@ export const ChipSection = () => {
                                             </Stack>
                                         </motion.div>
                                     </Box>
-                                    <Box maxW={{ base: '85%', md: '33%' }}>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <Box maxW={{ base: '95%', md: '33%' }}>
+                                        <motion.div key='chip3' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={0}>
                                                 <Text color={'#86868b'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600}>New</Text>
                                                 <Text color={'#fff'} fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600} lineHeight={'120%'}>Pro-class GPU</Text>
@@ -80,7 +80,7 @@ export const ChipSection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '250px', md: '270px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='chip4' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Go depper on A17 Pro</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />

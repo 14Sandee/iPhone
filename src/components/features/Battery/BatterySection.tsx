@@ -11,17 +11,6 @@ export const BatterySection = () => {
     return (
         <Box h={{ base: '150vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
-                {/* <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={'auto'} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
-                    {
-                        isInView && <>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
-                                <HStack w={'full'} justifyContent={'center'} spacing={0}>
-                                    <Image src='./images/a17chip.jpeg' alt='chip' boxSize={44} />
-                                </HStack>
-                            </motion.div>
-                        </>
-                    }
-                </Box> */}
                 <Box pos={'relative'} w='full' h='51%'>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={'auto'} overflow={'hidden'}>
                         <Stack w={{ base: '75%', md: 'auto' }} alignItems={{ base: 'start', md: 'center' }} spacing={0} mx={{ base: 'auto', md: 4 }}>
@@ -47,7 +36,7 @@ export const BatterySection = () => {
                             <HStack mx={{ base: 16, md: 0 }} flexDirection={{ base: 'column', md: 'row' }} ref={ref} spacing={{ base: 5, md: 20 }} alignItems={{ base: 'start', md: 'center' }} justifyContent={'space-around'}>
                                 <Box maxW={{ base: '85%', md: '33%' }}>
                                     {isInView &&
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key={'battery'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={0} >
                                                 <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>Up to</Text>
                                                 <Text color={'#fff'} fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600} lineHeight={'120%'}>29 hours</Text>
@@ -58,7 +47,7 @@ export const BatterySection = () => {
                                 </Box>
                                 <Box maxW={{ base: '85%', md: '33%' }}>
                                     {isInView &&
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key={'battery2'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={0}>
                                                 <Text color={'#86868b'} fontSize={{ base: 'lg', md: '2xl' }} fontWeight={600}>
                                                     Add a MagSafe Charger for <Text as={'span'} color={'#fff'}>fast, efficient wireless charging</Text>
@@ -71,7 +60,7 @@ export const BatterySection = () => {
                             <HStack mx={{ base: 16, md: 0 }} flexDirection={{ base: 'column', md: 'row' }} ref={ref2} spacing={{ base: 5, md: 20 }} alignItems={{ base: 'start', md: 'center' }} justifyContent={'space-around'}>
                                 <Box maxW={{ base: '85%', md: '33%' }}>
                                     {isInView2 &&
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key={'battery3'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={0} >
                                                 <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>Up to</Text>
                                                 <Text color={'#fff'} fontSize={{ base: '4xl', md: '7xl' }} fontWeight={600} lineHeight={'120%'}>23 hours</Text>
@@ -82,7 +71,7 @@ export const BatterySection = () => {
                                 </Box>
                                 <Box maxW={{ base: '85%', md: '33%' }}>
                                     {isInView2 &&
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key={'battery4'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={4} >
                                                 <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                                     iPhone 15 Pro Max has up to 9 more hours video playback than iPhone 12 Pro Max

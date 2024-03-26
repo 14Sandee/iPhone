@@ -17,10 +17,10 @@ export const WelcomeSection = () => {
                     </Stack>
                 </Stack>
                 <Stack spacing={8} w='full' alignItems={'center'}>
-                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}>
+                    <motion.div key={'welcome-button'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}>
                         <Button rounded={'full'} size={'lg'} fontWeight={400} colorScheme='primary'>Buy</Button>
                     </motion.div>
-                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                    <motion.div key={'welcome-text'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                         <Text color='gray.100' fontSize='xl' fontWeight={600}>From ₹21483.00/mo.‡ or ₹134900.00*</Text>
                     </motion.div>
                 </Stack>

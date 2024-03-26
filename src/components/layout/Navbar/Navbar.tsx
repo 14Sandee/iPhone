@@ -27,7 +27,7 @@ export const Navbar = () => {
     return (
         <>
             {
-                isAnimationStarted && <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} transition={{ duration: 0.5, ease: 'easeIn' }}>
+                isAnimationStarted && <motion.div key='navbar' initial={{ height: 0 }} animate={{ height: 'auto' }} transition={{ duration: 0.5, ease: 'easeIn' }}>
                     <Box w={'full'} pos={'fixed'} zIndex={99999} className='header-background' as='header' borderBottomWidth={1} borderBottomColor={'#f5f5f576'}>
                         <Box maxW="6xl" mx="auto" px={{ base: '6', lg: '12' }} py={1}>
                             <HStack display={'flex'} justifyContent={'space-between'} alignItems={'center'} color='gray.300' fontSize='xs'>

@@ -19,11 +19,11 @@ export const ExploreSection = () => {
     });
     return (
         <Box ref={exploreRef} h={{ base: '280vh', md: '255vh' }} as='section' pos={'relative'} bg="#101010">
-            <AnimatePresence>
+            <AnimatePresence key='explore'>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
-                            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                            <motion.div key='explore' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <Heading as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5.5xl' }} fontWeight={600}>
                                     Explore the full story.
                                 </Heading>
@@ -46,12 +46,12 @@ export const ExploreSection = () => {
                                 <GridItem colSpan={2} bg={'#000'} backgroundImage='./images/explore_1.jpeg' backgroundSize={'cover'} backgroundPosition={'bottom'} w={'full'} h={'lg'} overflow='hidden'>
                                 </GridItem>
                                 <GridItem colSpan={{ base: 2, md: 1 }} bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
-                                    <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
+                                    <motion.div key='explore2' initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
                                         <Image src='./images/explore_2.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
                                     </motion.div>
                                 </GridItem>
                                 <GridItem colSpan={{ base: 2, md: 1 }} bg={'#000'} w={'full'} h={'lg'} overflow='hidden'>
-                                    <motion.div initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
+                                    <motion.div key='explore3' initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
                                         <Image src='./images/explore_3.jpeg' alt='iphoneframe' w={'full'} h='lg' objectFit='contain' />
                                     </motion.div>
                                 </GridItem>
@@ -59,14 +59,14 @@ export const ExploreSection = () => {
                             <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
                                 {isInView3 && <>
                                     <Box maxW={{ md: '33%', base: '80%' }}>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='explore4' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Text color={'#86868b'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600}>
                                                 iPhone 15 Pro is <Text as={'span'} color={'#fff'}>the first iPhone to feature an aerospace‑grade titanium design</Text>, using the same alloy that spacecraft use for missions to Mars.
                                             </Text>
                                         </motion.div>
                                     </Box>
                                     <Box maxW={{ md: '33%', base: '80%' }}>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='explore5' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Text color={'#86868b'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600}>
                                                 Titanium has one of the best strength‑to‑weight ratios of any metal, making these our  <Text as={'span'} color={'#fff'}>lightest Pro models ever</Text>. You’ll notice the difference the moment you pick one up.
                                             </Text>
@@ -78,7 +78,7 @@ export const ExploreSection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '270px', md: '290px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='explore5' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>More on design & display</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />

@@ -55,7 +55,7 @@ export const ActionSection = () => {
                         <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={'auto'} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
                             {isInView && <>
                                 <Box maxW={{ base: '70%', md: '33%' }}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key={'action'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                             By default, the
                                             <Text as={'span'} color={'#fff'}> Action button is set to toggle between Ring and Silent modes</Text>. If you choose a different action, you can use Control Centre to mute or use Focus filters to automatically set your iPhone to silent.
@@ -63,7 +63,7 @@ export const ActionSection = () => {
                                     </motion.div>
                                 </Box>
                                 <Box maxW={{ base: '70%', md: '33%' }}>
-                                    <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    <motion.div key={'action-text'} initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Text color={'#86868b'} fontSize={{ base: 'md', md: 'xl' }} fontWeight={600}>
                                             Whatever you’re doing, the Action button is at the ready. Launch Camera to catch a spontaneous selfie. Record an instant voice memo. You can even  <Text as={'span'} color={'#fff'}>select Shortcut to open an app or run a series of tasks</Text> like switching on the lights in your living room and playing music.
                                         </Text>

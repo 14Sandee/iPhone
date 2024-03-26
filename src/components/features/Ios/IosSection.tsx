@@ -11,7 +11,7 @@ export const IosSection = () => {
     const isInView = useInView(textRef, { once: true })
     return (
         <Box ref={ref} h={{ base: '150vh', md: '185vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
-            <AnimatePresence>
+            <AnimatePresence key='ios'>
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>
                         <Box overflow={'hidden'} >
@@ -40,17 +40,17 @@ export const IosSection = () => {
                                 </SimpleGrid>
                                 <SimpleGrid ref={textRef} columns={[1, 3]} spacing={{ base: 5, md: 12 }} mx={{ base: 12, md: 'auto' }} mt={8}>
                                     {isInView && <>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='ios' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Text color={'#86868b'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={600}>
                                                 <Text as={'span'} color={'#fff'}>Contact Poster</Text>. Create your own poster that contacts will see when you call. Pick a favourite pic or Memoji, pair it with a favourite font and there you have it — your very own calling card.
                                             </Text>
                                         </motion.div>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='ios2' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Text color={'#86868b'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={600}>
                                                 <Text as={'span'} color={'#fff'}>Name Drop</Text>. Want to swap contact info with someone? Just bring your iPhone close to theirs. You can both choose what you want to share, and the information transfers instantly.
                                             </Text>
                                         </motion.div>
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='ios3' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Text color={'#86868b'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={600}>
                                                 <Text as={'span'} color={'#fff'}>Live Stickers</Text>. Touch and hold an object in a photo to lift it from the background and create a sticker. Add effects like Puffy and Shiny. Or create animated stickers from Live Photos.
                                             </Text>

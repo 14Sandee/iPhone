@@ -9,8 +9,8 @@ export const ZoomSection = () => {
     const ref = useRef(null)
     const isInView2 = useInView(ref, { once: true })
     return (
-        <Box h={{ base: '160vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
-            <AnimatePresence>
+        <Box h={{ base: '170vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
+            <AnimatePresence key='zoom'>
                 <Box pos={'relative'} w='full' h={{ base: '75%', md: '64%' }}>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={'auto'} overflow={'hidden'}>
                         <Stack alignItems={'center'} spacing={0} mx={{ base: 2, md: 4 }}>
@@ -30,10 +30,10 @@ export const ZoomSection = () => {
                                     Replay
                                 </Text>
                             </Box>
-                            <HStack ref={ref} flexDirection={{ base: 'column', md: 'row' }} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>
-                                <Box maxW={{ base: '80%', md: '33%' }}>
+                            <HStack ref={ref} flexDirection={{ base: 'column', md: 'row' }} mx={{ base: 16, md: 'auto' }} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'start', md: 'start' }} justifyContent={'space-around'}>
+                                <Box maxW={{ base: '100%', md: '33%' }}>
                                     {isInView2 &&
-                                        <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                        <motion.div key='zoom' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                             <Stack spacing={4}>
                                                 <Text color={'#86868b'} fontSize={{ base: 'lg', md: 'xl' }} fontWeight={600}>
                                                     For iPhone 15 Pro Max, we designed a 5x Telephoto camera with <Text as={'span'} color={'#fff'}>the longest optical zoom of any iPhone ever </Text>
@@ -48,7 +48,7 @@ export const ZoomSection = () => {
                                     }
                                 </Box>
                                 <Box maxW={{ base: '80%', md: '33%' }}>
-                                    {isInView2 && <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                                    {isInView2 && <motion.div key='zoom2' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                         <Stack spacing={0}>
                                             <Text color={'#fff'} fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600} lineHeight={'120%'}>5x optical</Text>
                                             <Text color={'#fff'} fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600} lineHeight={'120%'}>Zoom</Text>
@@ -61,7 +61,7 @@ export const ZoomSection = () => {
                     </Box>
                     <SectionButton isInView={isInView2} width={{ base: '280px', md: '300px' }}>
                         <HStack h={'58px'} px={4} justifyContent={'space-between'} alignItems={'center'}>
-                            <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
+                            <motion.div key='zoom3' style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 1.5 }}>
                                 <HStack w={'full'} justifyContent={'space-between'} spacing={2}>
                                     <Text color={'white'} fontSize={{ base: 'md', md: 'lg' }} fontWeight={500}>Nerd out on 5x Telephoto</Text>
                                     <IconButton rounded={'full'} colorScheme='primary' aria-label='arrow' icon={<IoAdd fontSize={24} fontWeight={700} />} />

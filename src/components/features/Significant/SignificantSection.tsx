@@ -12,11 +12,11 @@ export const SignificantSection = () => {
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
         <Box ref={significantRef} h={'205vh'} as='section' pos={'relative'} bg="#101010">
-            <AnimatePresence>
+            <AnimatePresence key='significant'>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
                         isInView && <>
-                            <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
+                            <motion.div key='significant' initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}>
                                 <Heading as='h2' color='#86868b' fontSize={{ base: '3xl', md: '5xl' }} fontWeight={600}>
                                     Significant others.
                                 </Heading>
@@ -26,7 +26,7 @@ export const SignificantSection = () => {
                 </Box>
                 <HStack maxW={'7xl'} mx={{ base: 8, md: 'auto' }} spacing={12} w={{ base: '80%', md: 'full' }} minH={'xl'} px={{ base: 2, md: 16 }} py={{ base: 10, md: 20 }} rounded={20} bg='black' justifyContent={'space-between'}>
                     <Accordion w={{ base: 'full', md: 'sm' }} h={{ base: '3xl', md: 'lg' }} overflow={'hidden'} borderColor={'#86868b'} defaultIndex={[0]}>
-                        {data.map((item, index) => <AccordionItem borderTop={`${index === 0 ? 0 : 'auto'}`} borderBottom={`${index === 2 ? 0 : 'auto'}`} py={{ base: 3, md: 6 }}>
+                        {data.map((item, index) => <AccordionItem key={index} borderTop={`${index === 0 ? 0 : 'auto'}`} borderBottom={`${index === 2 ? 0 : 'auto'}`} py={{ base: 3, md: 6 }}>
                             <AccordionButton onClick={() => setActive(index)}>
                                 <Box as="span" flex='1' textAlign='left'>
                                     <Text color='white' fontSize={{ base: 'xl', md: '3xl' }} fontWeight={600} lineHeight={'120%'}>{item.title}</Text>
