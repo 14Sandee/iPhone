@@ -41,7 +41,7 @@ export const ChipSection = () => {
                         <Stack ref={ref} mt={20} spacing={12} className='grid-container' maxW={'5xl'} mx={'auto'} pos={'absolute'} left={'50%'} w='full' overflow={'hidden'}>
                             <Box w={'full'}>
                                 <Image pos={'sticky'} zIndex={9} src='./images/iphoneframe.png' alt='iphoneframe' w={{ base: '90%', md: 'full' }} mx={{ base: 'auto' }} h={{ base: '3xs', md: 'lg' }} objectFit='contain' />
-                                <Box pos={'absolute'} zIndex={8} top={{ base: 6, md: 6 }} rounded={40} left={{ base: 6, md: 4 }} w={{ base: '88%', md: '97%' }} h={'auto'} overflow={'hidden'}>
+                                <Box pos={'absolute'} zIndex={8} top={{ base: 8, md: 6 }} rounded={40} left={{ base: 6, md: 4 }} w={{ base: '88%', md: '97%' }} h={'auto'} overflow={'hidden'}>
                                     <video autoPlay muted playsInline>
                                         <source src='./videos/game.mp4' type="video/mp4" style={{ objectFit: 'cover', }} />
                                     </video>
