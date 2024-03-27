@@ -10,7 +10,7 @@ export const ActionSection = () => {
     const textRef = useRef(null);
     const isInView = useInView(textRef, { once: true })
     return (
-        <Box h={{ base: '180vh', md: '180vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '190vh', md: '180vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
                 <Box maxW={'4xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 'auto', md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ base: 'center', md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <Stack w={{ base: '70%', md: 'auto' }} spacing={0} mx={{ base: 2, md: 4 }}>
