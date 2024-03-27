@@ -32,7 +32,7 @@ export const CameraSection = () => {
     }
     const isMobile = useBreakpointValue({ base: true, md: false, lg: false, xl: false })
     return (
-        <Box h={{ base: '360vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '370vh', md: '470vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key='camera-section'>
                 <Box maxW={'5xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <motion.div key='camera' ref={scrollRef} initial={{ opacity: 0.5 }} style={{ opacity: scrollYProgress }}>
