@@ -10,7 +10,7 @@ export const IosSection = () => {
     const textRef = useRef(null)
     const isInView = useInView(textRef, { once: true })
     return (
-        <Box ref={ref} h={{ base: '160vh', md: '185vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
+        <Box ref={ref} h={{ base: '170vh', md: '185vh' }} as='section' pos={'relative'} bg="#000" pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
             <AnimatePresence key='ios'>
                 <Box maxW={'6xl'} mx='auto' bg={'#101010'} pos={'relative'} w='full' h='95%' pb={20}>
                     <Box w='full' pos={'absolute'} top={0} minH={'100vh'} mx={'auto'} overflow={'auto'}>

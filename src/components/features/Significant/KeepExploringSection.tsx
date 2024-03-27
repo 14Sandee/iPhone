@@ -22,7 +22,7 @@ export const KeepExploringSection = () => {
     }
 
     return (
-        <Box ref={ref} h={{ base: '170vh', md: '230vh' }} bg={'#101010'} as='section' pos={'relative'} pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
+        <Box ref={ref} h={{ base: '190vh', md: '230vh' }} bg={'#101010'} as='section' pos={'relative'} pt={{ base: 5, md: 10 }} pb={{ base: 10, md: 20 }}>
             <AnimatePresence key='explore'>
                 <Box ref={keepExploringRef} maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {

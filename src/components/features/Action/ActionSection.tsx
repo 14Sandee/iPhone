@@ -10,7 +10,7 @@ export const ActionSection = () => {
     const textRef = useRef(null);
     const isInView = useInView(textRef, { once: true })
     return (
-        <Box h={{ base: '170vh', md: '180vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '180vh', md: '180vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
                 <Box maxW={'4xl'} pt={{ base: 10, md: 40 }} pb={10} mx={{ base: 'auto', md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ base: 'center', md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     <Stack w={{ base: '70%', md: 'auto' }} spacing={0} mx={{ base: 2, md: 4 }}>
@@ -49,7 +49,7 @@ export const ActionSection = () => {
                             <Stack rounded={40} w={{ base: '90%', md: '45%' }} minH={{ base: 'xl', md: '3xl' }} pos={'relative'} overflow={'hidden'}>
                                 <Box pos={'absolute'} bottom={0} zIndex={10} w={'xl'} h={'xl'} bgGradient={'linear(to top, black, transparent)'} />
                                 <Image pos={'absolute'} zIndex={9} src='./images/iphoneframe2.png' alt='action' w={'full'} h={'full'} objectFit='contain' />
-                                <Image pos={'absolute'} zIndex={8} top={2} left={4} src={data[active].url} alt='action' w={'full'} h={'full'} objectFit='contain' />
+                                <Image pos={'absolute'} zIndex={8} top={{ base: 4, md: 2 }} left={{ base: 2, md: 4 }} src={data[active].url} alt='action' w={'full'} h={'full'} objectFit='contain' />
                             </Stack>
                         </HStack>
                         <HStack ref={textRef} flexDirection={{ base: 'column', md: 'row' }} maxW={'4xl'} mx={'auto'} mt={12} spacing={{ base: 10, md: 20 }} alignItems={{ base: 'center', md: 'start' }} justifyContent={'space-around'}>

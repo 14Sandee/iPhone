@@ -12,7 +12,7 @@ export const ChipSection = () => {
     const textRef = useRef(null);
     const isInView3 = useInView(textRef, { once: true })
     return (
-        <Box ref={chipRef} h={{ base: '180vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
+        <Box ref={chipRef} h={{ base: '200vh', md: '225vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence key={'chip'}>
                 <Box maxW={'7xl'} pt={{ base: 10, md: 40 }} pb={{ base: 0, md: 10 }} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {

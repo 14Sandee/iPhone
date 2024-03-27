@@ -9,7 +9,7 @@ export const BatterySection = () => {
     const isInView = useInView(ref, { once: true })
     const isInView2 = useInView(ref2, { once: true })
     return (
-        <Box h={{ base: '150vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
+        <Box h={{ base: '170vh', md: '200vh' }} as='section' pos={'relative'} bg="#000">
             <AnimatePresence>
                 <Box pos={'relative'} w='full' h='51%'>
                     <Box maxW={'5xl'} py={{ base: 16, md: 32 }} mx={'auto'} overflow={'hidden'}>
