@@ -42,7 +42,7 @@ export const HighlightsSection = () => {
     };
 
     return (
-        <Box ref={higlightsRef} h={{ base: '135vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
+        <Box ref={higlightsRef} h={{ base: '145vh', md: '140vh' }} as='section' pos={'relative'} bg="#101010">
             <AnimatePresence key='highlight-section'>
                 <Box maxW={'7xl'} pt={{ base: 16, md: 40 }} pb={10} mx={{ base: 8, md: 'auto' }} display='flex' flexDirection={{ base: 'column', md: 'row' }} alignItems={{ md: 'flex-end' }} justifyContent={{ md: 'space-between' }} gap={{ base: 5, md: 10 }}>
                     {
